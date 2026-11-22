@@ -9,7 +9,8 @@ directly.
 | Route | Result |
 | --- | --- |
 | `GET /` | Small HTML page confirming the app is running |
-| `GET /health` | JSON health check: status, uptime, start time |
+| `GET /api/health` | JSON health check: status, uptime, start time |
+| `GET /health` | Answered by the Uppcoder platform itself (plain text `OK`), not by this app |
 | `GET /api/hello?name=Sakiko` | Example JSON API |
 
 ## Run locally

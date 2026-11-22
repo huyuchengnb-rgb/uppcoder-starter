@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   <h1>uppcoder-starter is running</h1>
   <p>This Express app runs on an Uppcoder Spark Free stack and is deployed from GitHub.</p>
   <ul>
-    <li><a href="/health">/health</a> &mdash; JSON health check</li>
+    <li><a href="/api/health">/api/health</a> &mdash; JSON health check</li>
     <li><a href="/api/hello?name=Sakiko">/api/hello?name=Sakiko</a> &mdash; example JSON API</li>
   </ul>
   <p>Started at: ${startedAt.toISOString()}</p>
@@ -26,7 +26,9 @@ app.get('/', (req, res) => {
 });
 
 // Health check: status, uptime and current time as JSON.
-app.get('/health', (req, res) => {
+// Note: plain /health is answered by the Uppcoder platform itself (plain
+// text "OK"), so the app's own health endpoint lives under /api/health.
+app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
     service: 'uppcoder-starter',
