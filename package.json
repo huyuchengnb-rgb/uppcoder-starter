@@ -1,0 +1,1 @@
+{"dependencies":{"express":"^5.3.0"},"description":"Minimal Express starter running on Uppcoder Spark Free, managed via GitHub.","engines":{"node":">=20"},"main":"index.js","name":"uppcoder-starter","scripts":{"start":"node index.js"},"type":"commonjs","version":"1.0.0"}
